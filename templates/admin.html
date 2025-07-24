@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center">☕ Admin Dashboard</h2>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm p-3">
+        <h4>🔋 Current Inventory</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Water: {{ inventory.water }} ml</li>
+          <li class="list-group-item">Milk: {{ inventory.milk }} ml</li>
+          <li class="list-group-item">Coffee: {{ inventory.coffee }} g</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6 d-flex flex-column justify-content-between">
+      <a href="/admin/refill" class="btn btn-primary mb-3"
+        >🔄 Refill Ingredients</a
+      >
+      <a href="/admin/add_user" class="btn btn-success mb-3">➕ Add New User</a>
+      <a href="/admin/users" class="btn btn-info mb-3">👥 View Users</a>
+      <a href="/admin/reports" class="btn btn-warning mb-3">📊 View Reports</a>
+      <a href="/menu" class="btn btn-secondary">📋 Back to Menu</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

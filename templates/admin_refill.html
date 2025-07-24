@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow" style="min-width: 400px">
+    <h3 class="text-center mb-3">🔄 Refill Ingredients</h3>
+
+    <form method="post">
+      <div class="mb-3">
+        <label class="form-label">Water (ml)</label>
+        <input
+          type="number"
+          name="water"
+          class="form-control"
+          min="0"
+          value="0"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Milk (ml)</label>
+        <input
+          type="number"
+          name="milk"
+          class="form-control"
+          min="0"
+          value="0"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Coffee (g)</label>
+        <input
+          type="number"
+          name="coffee"
+          class="form-control"
+          min="0"
+          value="0"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-success w-100">Submit</button>
+    </form>
+
+    <a href="/admin" class="btn btn-link mt-3 text-center"
+      >⬅️ Back to Dashboard</a
+    >
+  </div>
+</div>
+
+{% endblock %}

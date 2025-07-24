@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center">📊 Sales Report</h2>
+  <div class="card mt-4 p-4">
+    <h4>Total Sales</h4>
+    <p class="fs-3">Rs. {{ sales.total_sales }}</p>
+  </div>
+  <a href="/admin" class="btn btn-secondary mt-4">⬅ Back to Dashboard</a>
+</div>
+{% endblock %}

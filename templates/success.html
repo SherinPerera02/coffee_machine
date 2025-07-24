@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow p-4 text-center" style="min-width: 400px">
+    <h2 class="text-success mb-3">✅ Order Successful!</h2>
+    <p class="fs-5">Enjoy your <strong>{{ drink }}</strong> ☕</p>
+
+    <div class="alert alert-info mt-3">
+      <strong>Change Returned:</strong> Rs. {{ change }}
+    </div>
+
+    <a href="/menu" class="btn btn-primary mt-3">🔙 Back to Menu</a>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mt-5">
+  <h2 class="text-center">👥 All Users</h2>
+  <table class="table table-bordered table-striped mt-4">
+    <thead class="table-dark">
+      <tr>
+        <th>Username</th>
+        <th>Admin</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for username, info in users.items() %}
+      <tr>
+        <td>{{ username }}</td>
+        <td>{% if info.is_admin %}✅{% else %}❌{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="/admin" class="btn btn-secondary">⬅ Back to Dashboard</a>
+</div>
+{% endblock %}

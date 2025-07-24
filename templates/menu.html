@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="text-center mb-4">
+  <h2>☕ Coffee Menu</h2>
+  <p class="text-muted">Select your favorite drink and enjoy!</p>
+</div>
+
+<div class="row justify-content-center">
+  {% for name, drink in drinks.items() %}
+  <div class="col-md-4 mb-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ name.title() }}</h5>
+        <p class="card-text">Price: <strong>Rs. {{ drink.cost }}</strong></p>
+        <a href="/order/{{ name }}" class="btn btn-primary">Order Now</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="text-center mt-4">
+  <a href="/logout" class="btn btn-outline-danger">Logout</a>
+</div>
+
+{% endblock %}
