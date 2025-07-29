@@ -3,11 +3,11 @@
     "password": "admin123",
     "is_admin": true
   },
-  "sherin": {
+  "john": {
     "password": "pass123",
     "is_admin": false
   },
-  "sachin": {
+  "elsa": {
     "password": "1234",
     "is_admin": false
   }
