@@ -9,14 +9,40 @@
     />
     <style>
       body {
-        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: linear-gradient(-45deg, #b06ab3, #4568dc, #ff9a9e, #fad0c4);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        font-family: Arial, sans-serif;
+        color: #212529;
       }
+
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
       .navbar-brand {
         font-weight: bold;
       }
+
       .container {
         margin-top: 50px;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       }
+
       footer {
         margin-top: 50px;
         padding: 20px;
@@ -30,7 +56,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/menu"> Smart Coffee Machine</a>
+        <a class="navbar-brand" href="/menu">Smart Coffee Machine</a>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             {% if session['username'] %}
@@ -67,7 +93,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Coffee Machine Project • Built with using Flask</p>
+      <p>&copy; 2025 Coffee Machine Project • Built using Flask</p>
     </footer>
   </body>
 </html>
